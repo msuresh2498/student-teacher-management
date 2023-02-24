@@ -1,38 +1,222 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.Home {
+   text-align: left;
+  
+  min-height: 100vh;
+}
+
+.appbar-msicon{
+  font-weight: 800;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Home-bar{
+  height: 600px;
+  background-image: url("https://wallpaperaccess.com/full/2223407.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 300px;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.home-subhead
+ {
+  font-weight: 900;
+  font-size: 80px;
   color: white;
+  font-family: 'Righteous', cursive;
 }
 
-.App-link {
-  color: #61dafb;
+.Home-card {
+  width: 14rem;
+  height: 19rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Card-img {
+  width: 19rem;
+  height: 16rem;
 }
+
+.Card-img2 {
+  width: 19rem;
+  height: 16rem;
+  background-color: #81BCFF;
+  position: sticky;
+}
+
+.stud-login-btn {
+  width: 14rem;
+  height: 3rem;
+  background: transparent !important;
+}
+
+.Home-cards {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
+
+.login-container {
+  align-items: center;
+  display: grid;
+  gap: 30px;
+  margin: 100px auto;
+  width: 35%;
+}
+
+.Stud-signup-container{
+  align-items: center;
+  display: grid;
+  gap: 30px;
+  margin: 50px auto;
+  width: 35%;
+}
+
+.Student-table{
+  width: 70% !important;
+  margin: 0 auto;
+}
+
+.addStudent-container{
+  align-items: center;
+  display: grid;
+  gap: 30px;
+  margin: 50px auto;
+  width: 35%;
+}
+
+.AdminPage{
+  display: flex;
+  flex-direction: row;
+}
+.Sidebar{
+  width: 15rem;
+  min-height: 100vh;
+  background-color: white;
+  border: 1px solid #BFBFBF;
+  padding: 10px;
+  box-shadow: 1px 0 10px #aaaaaa;
+}
+
+.list-item{
+  font-size: 23px !important;
+  width: 100%;
+  height: 70px !important;
+  font-family: 'Source Code Pro', monospace !important;
+  font-weight: 600 !important;
+  color: black !important;
+  gap: 10px !important;
+
+}
+.admin-icon{
+  height: 120px;
+  margin: 10px;
+}
+
+.admin-logout{
+  margin-top: 150px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+}
+
+.admin-cards{
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  margin: 30px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.admin-card-items{
+  width: 18rem;
+  height: 8rem;
+}
+
+.main-Dashboard{
+  width: 100%;
+}
+
+.admin-card-icon1{
+  color: rgb(232, 218, 62);
+  height: 60px !important;
+  width: 60px !important;
+}
+.admin-card-icon2{
+  color: rgb(232, 119, 27);
+  height: 60px !important;
+  width: 60px !important;
+}
+.admin-card-icon3{
+  color: rgb(52, 150, 231);
+  height: 60px !important;
+  width: 60px !important;
+}
+.admin-card-icon4{
+  color: rgb(238, 32, 180);
+  height: 60px !important;
+  width: 60px !important;
+}
+
+.admin-typography{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.admin-card-text{
+  color: gray;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+}
+.admin-card-subtext{
+  font-family: 'Tilt Warp', cursive;
+  font-size: 30px;
+}
+
+.dash-heading{
+  font-size: 35px;
+  text-align: left;
+  margin: 30px;
+  font-family: 'Tilt Warp', cursive;
+}
+
+.admin-chart{
+  width: 60%;
+  text-align: left;
+  margin: 30px;
+  padding: 20px;
+}
+
+.chart-heading{
+  text-align: center;
+  font-family: 'Tilt Warp', cursive;
+}
+.chart-subhead{
+  font-family:  'Tilt Warp', cursive;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.chart-amt-head{
+  color: green;
+  font-size: 25px;
+}
+
