@@ -1,17 +1,19 @@
-import LogoutIcon from '@mui/icons-material/Logout';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import SchoolIcon from '@mui/icons-material/School';
+
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
-import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
-import { Button, Card, CardContent, List, Typography } from '@mui/material';
+import {  Card, CardContent,  Typography } from '@mui/material';
 import GroupsIcon from '@mui/icons-material/Groups';
 import Groups3Icon from '@mui/icons-material/Groups3';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
-import { Collections } from '@mui/icons-material';
-import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
+import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import { Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { useNavigate } from 'react-router-dom';
+import Sidebar from './sidebar';
 
 export const AdminDash = () => {
+
+
+  
+
   const data = [
     {
       name: "Jun",
@@ -53,32 +55,22 @@ export const AdminDash = () => {
       totalcollections: "580000"
     }
   ]
+
+  const piedata = [
+    {
+      name: "male",
+      value: 820
+    },
+    {
+      name: "female",
+      value: 480
+    }
+  ]
+
+  const COLORS = ['#0088FE', '#FF8042'];
   return (
     <div className="AdminPage">
-      <div className="Sidebar">
-        <img src='https://www.pngmart.com/files/21/Admin-Profile-Vector-PNG-Clipart.png' alt='admin-icon' className='admin-icon' />
-        <List className='sidebar-list'>
-          <Button className='list-item'>
-            <DashboardIcon /> Dashboard
-          </Button>
-          <Button className='list-item'>
-            <PermIdentityIcon /> Teachers
-          </Button>
-          <Button className='list-item'>
-            <SchoolIcon /> Students
-          </Button>
-          <Button className='list-item'>
-            <SupervisorAccountIcon /> Admission
-          </Button>
-          <Button className='list-item'>
-            <LibraryBooksIcon /> Attendence
-          </Button>
-        </List>
-        <h2 className='admin-logout'><LogoutIcon />Logout</h2>
-      </div>
-
-
-
+      {Sidebar()}
       <div className="main-Dashboard">
         <h1 className='dash-heading'>Admin Dashboard</h1>
         <div className='admin-cards'>
@@ -123,7 +115,7 @@ export const AdminDash = () => {
             </CardContent>
           </Card>
         </div>
-        <div>
+        <div className='admin-list-charts'>
           <Card className='admin-chart'>
             <Typography>
               <h3 className='chart-heading'>Earnings</h3>
@@ -142,8 +134,23 @@ export const AdminDash = () => {
               <Bar dataKey="totalcollections" fill="#82ca9d" />
             </BarChart>
           </Card>
+          <Card className='pie-chart'>
+            <h1 className='pie-head'>Students</h1>
+            <PieChart width={730} height={250} >
+              <Pie data={piedata} dataKey="value" nameKey="name" cx="28%" cy="50%" innerRadius={45}
+                outerRadius={80} paddingAngle={7} fill="#8884d8" >
+                {data.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+            </PieChart>
+            <div className='pie-subhead'><p><RadioButtonCheckedIcon className='pie-icons-male' /> Male Students</p><p><RadioButtonCheckedIcon className='pie-icons-female' /> Female Students</p></div>
+
+          </Card>
         </div>
       </div>
     </div>
   );
+
+ 
 };
