@@ -6,7 +6,6 @@ import Groups3Icon from '@mui/icons-material/Groups3';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import { Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
-import { useNavigate } from 'react-router-dom';
 import Sidebar from './sidebar';
 
 export const AdminDash = () => {

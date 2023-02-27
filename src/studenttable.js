@@ -5,7 +5,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import Sidebar from './sidebar';
 
 const StudentTable = (props) => {
