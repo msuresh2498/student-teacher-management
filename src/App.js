@@ -243,6 +243,11 @@ function App() {
             <Route path='/studtable' element={<StudentTable deleteUser={deleteUser} editStudent={editStudent} student={student} />} />
           </Routes>
 
+          {/* <p>-----error code-------</p>      */}
+          {teachediting ? (<div></div>) : (<div></div>)}
+          {studediting ? (<div></div>) : (<div></div>)}
+          {/* <p>-----error code-------</p>      */}
+
           <Paper className='footer-container' >
             <div className='footer'>
               <p className='footer-icons'><FacebookIcon /> Facebook</p>
